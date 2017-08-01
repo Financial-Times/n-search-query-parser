@@ -1,0 +1,26 @@
+{
+  "name": "@financial-times/n-search-parser",
+  "version": "0.0.0",
+  "main": "lib/parser.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Financial-Times/n-search-parser.git"
+  },
+  "homepage": "https://github.com/Financial-Times/n-search-parser",
+  "dependencies": {},
+  "devDependencies": {
+    "@financial-times/n-gage": "^1.8.22",
+    "chai": "^3.5.0",
+    "eslint": "^3.18.0",
+    "lintspaces-cli": "^0.6.0",
+    "mocha": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "precommit": "node_modules/.bin/secret-squirrel",
+    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
+    "prepush": "make verify -j3"
+  }
+}
