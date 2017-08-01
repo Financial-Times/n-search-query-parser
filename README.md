@@ -73,6 +73,14 @@ The parser will return an array of _tokens_. Each token has a `type` property an
 
 The `group`, `phrase` and `word` tokens may also have an `operand` property which indicates they are on the right-hand side of an `operator`.
 
+## Performance
+
+This module has been benchmarked using one weeks real search data:
+
+```
+Benchmark processed 54348 items in 0.503448318 seconds
+```
+
 ## Inspired by
 
 - [Lucene query parser][3] (NPM module, generated from PEG)
