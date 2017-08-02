@@ -6,10 +6,8 @@ node_modules/@financial-times/n-gage/index.mk:
 
 -include node_modules/@financial-times/n-gage/index.mk
 
-# unit-test:
-# 	export NODE_ENV=test; \
-# 	export AWS_SIGNED_FETCH_DISABLE_DNS_RESOLUTION=true; \
-# 	mocha 'test/spec/**/*-spec.js'
+unit-test:
+	export NODE_ENV=test; mocha 'test/spec/**/*.spec.js'
 
 # unit-test-coverage:
 	# nyc --reporter=$(if $(CIRCLECI),lcovonly,lcov) make unit-test

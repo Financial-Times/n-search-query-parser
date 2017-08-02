@@ -32,7 +32,7 @@ This will return an array of tokens (details of which are below):
 ```js
 [
   {
-    type: 'exact',
+    type: 'phrase',
     text: '"Elon Musk"'
   },
   {
@@ -67,7 +67,7 @@ This will return an array of tokens (details of which are below):
 The parser will return an array of _tokens_. Each token has a `type` property and the raw `text` that it was generated from. The types are:
 
 - **group** is an expression within parentheses.
-- **phrase** is a series of words within double quotes.
+- **phrase** is a word or series of words within double quotes.
 - **operator** is one of `'AND'`, `'OR'` or `'NOT'`.
 - **word** is any series of characters up to, but not including a whitespace.
 

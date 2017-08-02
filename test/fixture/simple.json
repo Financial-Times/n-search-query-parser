@@ -1,0 +1,157 @@
+[
+    {
+        "input": "Investment banks",
+        "output": [
+            {
+                "type": "word",
+                "text": "Investment"
+            },
+            {
+                "type": "word",
+                "text": "banks"
+            }
+        ]
+    },
+    {
+        "input": "Oil & gas",
+        "output": [
+            {
+                "type": "word",
+                "text": "Oil"
+            },
+            {
+                "type": "word",
+                "text": "&"
+            },
+            {
+                "type": "word",
+                "text": "gas"
+            }
+        ]
+    },
+    {
+        "input": "\"hedge funds\"",
+        "output": [
+            {
+                "type": "phrase",
+                "text": "\"hedge funds\""
+            }
+        ]
+    },
+    {
+        "input": "Scottish Power  OR  ScottishPower",
+        "output": [
+            {
+                "type": "word",
+                "text": "Scottish"
+            },
+            {
+                "type": "word",
+                "text": "Power"
+            },
+            {
+                "type": "operator",
+                "text": "OR"
+            },
+            {
+                "type": "word",
+                "text": "ScottishPower",
+                "operand": "OR"
+            }
+        ]
+    },
+    {
+        "input": "Tower \"new zealand\"",
+        "output": [
+            {
+                "type": "word",
+                "text": "Tower"
+            },
+            {
+                "type": "phrase",
+                "text": "\"new zealand\""
+            }
+        ]
+    },
+    {
+        "input": "\"Ackman\" AND \"Herbalife\" AND \"short\"",
+        "output": [
+            {
+                "type": "phrase",
+                "text": "\"Ackman\""
+            },
+            {
+                "type": "operator",
+                "text": "AND"
+            },
+            {
+                "type": "phrase",
+                "text": "\"Herbalife\"",
+                "operand": "AND"
+            },
+            {
+                "type": "operator",
+                "text": "AND"
+            },
+            {
+                "type": "phrase",
+                "text": "\"short\"",
+                "operand": "AND"
+            }
+        ]
+    },
+    {
+        "input": "\"Elon Musk\" AND (Space-X OR Tesla)",
+        "output": [
+            {
+                "type": "phrase",
+                "text": "\"Elon Musk\""
+            },
+            {
+                "type": "operator",
+                "text": "AND"
+            },
+            {
+                "type": "group",
+                "text": "(Space-X OR Tesla)",
+                "operand": "AND",
+                "children": [
+                    {
+                        "type": "word",
+                        "text": "Space-X"
+                    },
+                    {
+                        "type": "operator",
+                        "text": "OR"
+                    },
+                    {
+                        "type": "word",
+                        "text": "Tesla",
+                        "operand": "OR"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "input": "standard & Poor's 1500",
+        "output": [
+            {
+                "type": "word",
+                "text": "standard"
+            },
+            {
+                "type": "word",
+                "text": "&"
+            },
+            {
+                "type": "word",
+                "text":"Poor's"
+            },
+            {
+                "type": "word",
+                "text": "1500"
+            }
+        ]
+    }
+]
