@@ -1,5 +1,6 @@
 [
     {
+        "desc": "two words",
         "input": "Investment banks",
         "output": [
             {
@@ -13,6 +14,7 @@
         ]
     },
     {
+        "desc": "words with punctuation",
         "input": "Oil & gas",
         "output": [
             {
@@ -30,6 +32,7 @@
         ]
     },
     {
+        "desc": "phrase",
         "input": "\"hedge funds\"",
         "output": [
             {
@@ -39,6 +42,7 @@
         ]
     },
     {
+        "desc": "single operator",
         "input": "Scottish Power  OR  ScottishPower",
         "output": [
             {
@@ -61,6 +65,7 @@
         ]
     },
     {
+        "desc": "word and phrase",
         "input": "Tower \"new zealand\"",
         "output": [
             {
@@ -74,6 +79,7 @@
         ]
     },
     {
+        "desc": "multiple phrases and operators",
         "input": "\"Ackman\" AND \"Herbalife\" AND \"short\"",
         "output": [
             {
@@ -101,6 +107,7 @@
         ]
     },
     {
+        "desc": "a phrase, operators and group",
         "input": "\"Elon Musk\" AND (Space-X OR Tesla)",
         "output": [
             {
@@ -134,6 +141,7 @@
         ]
     },
     {
+        "desc": "words with punctuation and grammar",
         "input": "standard & Poor's 1500",
         "output": [
             {

@@ -4,8 +4,8 @@ const subject = require('../../');
 
 describe('lib/parser', () => {
 	context('given simple queries', () => {
-		it('returns an array of tokens', () => {
-			fixtureSimple.forEach(({ input, output }) => {
+		fixtureSimple.forEach(({ desc, input, output }) => {
+			it(desc, () => {
 				const result = subject(input);
 				expect(result).to.deep.equal(output);
 			});
