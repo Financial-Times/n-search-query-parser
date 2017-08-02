@@ -20,7 +20,7 @@
                 "text": "Oil"
             },
             {
-                "type": "word",
+                "type": "punctuation",
                 "text": "&"
             },
             {
@@ -141,7 +141,7 @@
                 "text": "standard"
             },
             {
-                "type": "word",
+                "type": "punctuation",
                 "text": "&"
             },
             {

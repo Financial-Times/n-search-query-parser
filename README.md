@@ -69,6 +69,7 @@ The parser will return an array of _tokens_. Each token has a `type` property an
 - **group** is an expression within parentheses.
 - **phrase** is a word or series of words within double quotes.
 - **operator** is one of `'AND'`, `'OR'` or `'NOT'`.
+- **punctuation** is any punctuation character supported by the [XRegExp][5] unicode group.
 - **word** is any series of characters up to, but not including a whitespace.
 
 The `group`, `phrase` and `word` tokens may also have an `operand` property which indicates they are on the right-hand side of an `operator`.
@@ -90,3 +91,4 @@ Benchmark processed 54348 items in 0.503448318 seconds
 [2]: http://canopy.jcoglan.com/
 [3]: https://github.com/thoward/lucene-query-parser.js
 [4]: https://tgvashworth.com/2016/06/27/twitter-search-query-parser.html
+[5]: http://xregexp.com/plugins/#unicode
