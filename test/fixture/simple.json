@@ -2,7 +2,7 @@
     {
         "desc": "two words",
         "input": "Investment banks",
-        "output": [
+        "tokens": [
             {
                 "type": "word",
                 "text": "Investment"
@@ -16,13 +16,13 @@
     {
         "desc": "words with punctuation",
         "input": "Oil & gas",
-        "output": [
+        "tokens": [
             {
                 "type": "word",
                 "text": "Oil"
             },
             {
-                "type": "punctuation",
+                "type": "word",
                 "text": "&"
             },
             {
@@ -34,7 +34,7 @@
     {
         "desc": "phrase",
         "input": "\"hedge funds\"",
-        "output": [
+        "tokens": [
             {
                 "type": "phrase",
                 "text": "\"hedge funds\""
@@ -44,7 +44,7 @@
     {
         "desc": "single operator",
         "input": "Scottish Power  OR  ScottishPower",
-        "output": [
+        "tokens": [
             {
                 "type": "word",
                 "text": "Scottish"
@@ -59,15 +59,14 @@
             },
             {
                 "type": "word",
-                "text": "ScottishPower",
-                "operand": "OR"
+                "text": "ScottishPower"
             }
         ]
     },
     {
         "desc": "word and phrase",
         "input": "Tower \"new zealand\"",
-        "output": [
+        "tokens": [
             {
                 "type": "word",
                 "text": "Tower"
@@ -81,7 +80,7 @@
     {
         "desc": "multiple phrases and operators",
         "input": "\"Ackman\" AND \"Herbalife\" AND \"short\"",
-        "output": [
+        "tokens": [
             {
                 "type": "phrase",
                 "text": "\"Ackman\""
@@ -92,8 +91,7 @@
             },
             {
                 "type": "phrase",
-                "text": "\"Herbalife\"",
-                "operand": "AND"
+                "text": "\"Herbalife\""
             },
             {
                 "type": "operator",
@@ -101,15 +99,14 @@
             },
             {
                 "type": "phrase",
-                "text": "\"short\"",
-                "operand": "AND"
+                "text": "\"short\""
             }
         ]
     },
     {
         "desc": "a phrase, operators and group",
         "input": "\"Elon Musk\" AND (Space-X OR Tesla)",
-        "output": [
+        "tokens": [
             {
                 "type": "phrase",
                 "text": "\"Elon Musk\""
@@ -121,7 +118,6 @@
             {
                 "type": "group",
                 "text": "(Space-X OR Tesla)",
-                "operand": "AND",
                 "children": [
                     {
                         "type": "word",
@@ -133,8 +129,7 @@
                     },
                     {
                         "type": "word",
-                        "text": "Tesla",
-                        "operand": "OR"
+                        "text": "Tesla"
                     }
                 ]
             }
@@ -143,13 +138,13 @@
     {
         "desc": "words with punctuation and grammar",
         "input": "standard & Poor's 1500",
-        "output": [
+        "tokens": [
             {
                 "type": "word",
                 "text": "standard"
             },
             {
-                "type": "punctuation",
+                "type": "word",
                 "text": "&"
             },
             {
