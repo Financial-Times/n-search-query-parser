@@ -16,14 +16,19 @@ $ npm i -S @financial-times/n-search-parser
 
 ## Usage
 
-The module will export three methods.
+First include the module in your code:
+
+```js
+const parser = require('@financial-times/n-search-parser');
+```
+
+This module will export three methods...
 
 ### `tokenize(query)`
 
 Accepts a string and returns an array of tokens.
 
 ```js
-const parser = require('@financial-times/n-search-parser');
 const tokens = parser.tokenize('"Elon Musk" AND (Space-X OR Tesla)');
 
 /* => [
@@ -76,14 +81,12 @@ Combines the `tokenize` and `build` methods. Accepts a string and returns an obj
 
 ## Grammar
 
-The parser will return an array of _tokens_. Each token has a `type` property and the raw `text` that it was generated from. The types are:
+The tokenizer will return an array of _tokens_. Each token has a `type` property and the raw `text` that it was generated from. The types are:
 
 - **group** is an expression within parentheses.
 - **phrase** is a word or series of words within double quotes.
 - **operator** is one of `'AND'`, `'OR'` or `'NOT'`.
 - **word** is any series of characters up to, but not including a whitespace.
-
-The `group`, `phrase` and `word` tokens may also have an `operand` property which indicates they are on the right-hand side of an `operator`.
 
 ## Performance
 
