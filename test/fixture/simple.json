@@ -221,22 +221,15 @@
             },
             "operator": "AND",
             "right": {
-                "type": "group",
-                "text": "(Space-X OR Tesla)",
-                "children": [
-                    {
-                        "type": "word",
-                        "text": "Space-X"
-                    },
-                    {
-                        "type": "operator",
-                        "text": "OR"
-                    },
-                    {
-                        "type": "word",
-                        "text": "Tesla"
-                    }
-                ]
+                "left": {
+                    "type": "word",
+                    "text": "Space-X"
+                },
+                "operator": "OR",
+                "right": {
+                    "type": "word",
+                    "text": "Tesla"
+                }
             }
         }
     },

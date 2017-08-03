@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const arg = process.argv.slice(-1).pop();
+
+const parser = require('../');
+
+console.log(
+	JSON.stringify(parser(arg), null, 2)
+);
