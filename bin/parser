@@ -2,8 +2,8 @@
 
 const arg = process.argv.slice(-1).pop();
 
-const parser = require('../');
+const { parse } = require('../');
 
 console.log(
-	JSON.stringify(parser(arg), null, 2)
+	JSON.stringify(parse(arg), null, 2)
 );
