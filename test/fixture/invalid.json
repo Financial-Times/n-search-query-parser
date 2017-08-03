@@ -1,0 +1,31 @@
+[
+    {
+        "desc": "overloaded operators",
+        "query": "\"Theresa May\" AND NOT brexit",
+        "tokens": [
+            {
+                "type": "phrase",
+                "text": "\"Theresa May\""
+            },
+            {
+                "type": "operator",
+                "text": "NOT"
+            },
+            {
+                "type": "word",
+                "text": "brexit"
+            }
+        ],
+        "tree": {
+            "left": {
+                "type": "phrase",
+                "text": "\"Theresa May\""
+            },
+            "operator": "NOT",
+            "right": {
+                "type": "word",
+                "text": "brexit"
+            }
+        }
+    }
+]

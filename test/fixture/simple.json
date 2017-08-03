@@ -1,7 +1,7 @@
 [
     {
         "desc": "two words",
-        "input": "Investment banks",
+        "query": "Investment banks",
         "tokens": [
             {
                 "type": "word",
@@ -26,7 +26,7 @@
     },
     {
         "desc": "words with punctuation",
-        "input": "Oil & gas",
+        "query": "Oil & gas",
         "tokens": [
             {
                 "type": "word",
@@ -62,7 +62,7 @@
     },
     {
         "desc": "phrase",
-        "input": "\"hedge funds\"",
+        "query": "\"hedge funds\"",
         "tokens": [
             {
                 "type": "phrase",
@@ -76,7 +76,7 @@
     },
     {
         "desc": "single operator",
-        "input": "Scottish Power  OR  ScottishPower",
+        "query": "Scottish Power  OR  ScottishPower",
         "tokens": [
             {
                 "type": "word",
@@ -116,7 +116,7 @@
     },
     {
         "desc": "word and phrase",
-        "input": "Tower \"new zealand\"",
+        "query": "Tower \"new zealand\"",
         "tokens": [
             {
                 "type": "word",
@@ -141,7 +141,7 @@
     },
     {
         "desc": "multiple phrases and operators",
-        "input": "\"Ackman\" AND \"Herbalife\" AND \"short\"",
+        "query": "\"Ackman\" AND \"Herbalife\" AND \"short\"",
         "tokens": [
             {
                 "type": "phrase",
@@ -185,7 +185,7 @@
     },
     {
         "desc": "a phrase, operators and group",
-        "input": "\"Elon Musk\" AND (Space-X OR Tesla)",
+        "query": "\"Elon Musk\" AND (Space-X OR Tesla)",
         "tokens": [
             {
                 "type": "phrase",
@@ -235,7 +235,7 @@
     },
     {
         "desc": "words with punctuation and grammar",
-        "input": "standard & Poor's 1500",
+        "query": "standard & Poor's 1500",
         "tokens": [
             {
                 "type": "word",
