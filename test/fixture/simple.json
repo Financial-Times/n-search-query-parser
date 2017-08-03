@@ -11,7 +11,18 @@
                 "type": "word",
                 "text": "banks"
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "word",
+                "text": "Investment"
+            },
+            "operator": "<implicit>",
+            "right": {
+                "type": "word",
+                "text": "banks"
+            }
+        }
     },
     {
         "desc": "words with punctuation",
@@ -29,7 +40,25 @@
                 "type": "word",
                 "text": "gas"
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "word",
+                "text": "Oil"
+            },
+            "operator": "<implicit>",
+            "right": {
+                "left": {
+                    "type": "word",
+                    "text": "&"
+                },
+                "operator": "<implicit>",
+                "right": {
+                    "type": "word",
+                    "text": "gas"
+                }
+            }
+        }
     },
     {
         "desc": "phrase",
@@ -39,7 +68,11 @@
                 "type": "phrase",
                 "text": "\"hedge funds\""
             }
-        ]
+        ],
+        "tree": {
+            "type": "phrase",
+            "text": "\"hedge funds\""
+        }
     },
     {
         "desc": "single operator",
@@ -61,7 +94,25 @@
                 "type": "word",
                 "text": "ScottishPower"
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "word",
+                "text": "Scottish"
+            },
+            "operator": "<implicit>",
+            "right": {
+                "left": {
+                    "type": "word",
+                    "text": "Power"
+                },
+                "operator": "OR",
+                "right": {
+                    "type": "word",
+                    "text": "ScottishPower"
+                }
+            }
+        }
     },
     {
         "desc": "word and phrase",
@@ -75,7 +126,18 @@
                 "type": "phrase",
                 "text": "\"new zealand\""
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "word",
+                "text": "Tower"
+            },
+            "operator": "<implicit>",
+            "right": {
+                "type": "phrase",
+                "text": "\"new zealand\""
+            }
+        }
     },
     {
         "desc": "multiple phrases and operators",
@@ -101,7 +163,25 @@
                 "type": "phrase",
                 "text": "\"short\""
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "phrase",
+                "text": "\"Ackman\""
+            },
+            "operator": "AND",
+            "right": {
+                "left": {
+                    "type": "phrase",
+                    "text": "\"Herbalife\""
+                },
+                "operator": "AND",
+                "right": {
+                    "type": "phrase",
+                    "text": "\"short\""
+                }
+            }
+        }
     },
     {
         "desc": "a phrase, operators and group",
@@ -133,7 +213,32 @@
                     }
                 ]
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "phrase",
+                "text": "\"Elon Musk\""
+            },
+            "operator": "AND",
+            "right": {
+                "type": "group",
+                "text": "(Space-X OR Tesla)",
+                "children": [
+                    {
+                        "type": "word",
+                        "text": "Space-X"
+                    },
+                    {
+                        "type": "operator",
+                        "text": "OR"
+                    },
+                    {
+                        "type": "word",
+                        "text": "Tesla"
+                    }
+                ]
+            }
+        }
     },
     {
         "desc": "words with punctuation and grammar",
@@ -149,12 +254,37 @@
             },
             {
                 "type": "word",
-                "text":"Poor's"
+                "text": "Poor's"
             },
             {
                 "type": "word",
                 "text": "1500"
             }
-        ]
+        ],
+        "tree": {
+            "left": {
+                "type": "word",
+                "text": "standard"
+            },
+            "operator": "<implicit>",
+            "right": {
+                "left": {
+                    "type": "word",
+                    "text": "&"
+                },
+                "operator": "<implicit>",
+                "right": {
+                    "left": {
+                        "type": "word",
+                        "text": "Poor's"
+                    },
+                    "operator": "<implicit>",
+                    "right": {
+                        "type": "word",
+                        "text": "1500"
+                    }
+                }
+            }
+        }
     }
 ]
