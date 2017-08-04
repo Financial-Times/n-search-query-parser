@@ -222,13 +222,15 @@
             "operator": "AND",
             "right": {
                 "left": {
-                    "type": "word",
-                    "text": "Space-X"
-                },
-                "operator": "OR",
-                "right": {
-                    "type": "word",
-                    "text": "Tesla"
+                    "left": {
+                        "type": "word",
+                        "text": "Space-X"
+                    },
+                    "operator": "OR",
+                    "right": {
+                        "type": "word",
+                        "text": "Tesla"
+                    }
                 }
             }
         }
@@ -275,6 +277,107 @@
                     "right": {
                         "type": "word",
                         "text": "1500"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "desc": "multiple groups and operators",
+        "query": "JavaScript AND (browser OR client-side) AND (Webpack OR Browserify) NOT React",
+        "tokens": [
+            {
+                "type": "word",
+                "text": "JavaScript"
+            },
+            {
+                "type": "operator",
+                "text": "AND"
+            },
+            {
+                "type": "group",
+                "text": "(browser OR client-side)",
+                "children": [
+                    {
+                        "type": "word",
+                        "text": "browser"
+                    },
+                    {
+                        "type": "operator",
+                        "text": "OR"
+                    },
+                    {
+                        "type": "word",
+                        "text": "client-side"
+                    }
+                ]
+            },
+            {
+                "type": "operator",
+                "text": "AND"
+            },
+            {
+                "type": "group",
+                "text": "(Webpack OR Browserify)",
+                "children": [
+                    {
+                        "type": "word",
+                        "text": "Webpack"
+                    },
+                    {
+                        "type": "operator",
+                        "text": "OR"
+                    },
+                    {
+                        "type": "word",
+                        "text": "Browserify"
+                    }
+                ]
+            },
+            {
+                "type": "operator",
+                "text": "NOT"
+            },
+            {
+                "type": "word",
+                "text": "React"
+            }
+        ],
+        "tree": {
+            "left": {
+                "type": "word",
+                "text": "JavaScript"
+            },
+            "operator": "AND",
+            "right": {
+                "left": {
+                    "left": {
+                        "type": "word",
+                        "text": "browser"
+                    },
+                    "operator": "OR",
+                    "right": {
+                        "type": "word",
+                        "text": "client-side"
+                    }
+                },
+                "operator": "AND",
+                "right": {
+                    "left": {
+                        "left": {
+                            "type": "word",
+                            "text": "Webpack"
+                        },
+                        "operator": "OR",
+                        "right": {
+                            "type": "word",
+                            "text": "Browserify"
+                        }
+                    },
+                    "operator": "NOT",
+                    "right": {
+                        "type": "word",
+                        "text": "React"
                     }
                 }
             }
