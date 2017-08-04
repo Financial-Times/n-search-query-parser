@@ -1,0 +1,10 @@
+machine:
+  node:
+    version: 6.9.0
+deployment:
+  release:
+    tag: /^v?\d+\.\d+\.\d+(?:-beta\.\d+)?$/
+    owner: Financial-Times
+    commands:
+      - npm version --no-git-tag-version ${CIRCLE_TAG}
+      - npm publish --access public
