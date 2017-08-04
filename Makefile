@@ -12,8 +12,7 @@ unit-test:
 # unit-test-coverage:
 	# nyc --reporter=$(if $(CIRCLECI),lcovonly,lcov) make unit-test
 
-test:
-	make verify
+test: verify unit-test
 
 # ifeq ($(CIRCLECI),true)
 	# make unit-test-coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
