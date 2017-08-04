@@ -7,9 +7,6 @@
     "url": "git@github.com:Financial-Times/n-search-parser.git"
   },
   "homepage": "https://github.com/Financial-Times/n-search-parser",
-  "dependencies": {
-    "xregexp": "^3.2.0"
-  },
   "devDependencies": {
     "@financial-times/n-gage": "^1.8.22",
     "chai": "^3.5.0",
