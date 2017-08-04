@@ -1,6 +1,6 @@
 # n-search-parser
 
-This parser is not that smart, but that's OK. You don't need to know about [parsing expression grammar][1] (and subsequently [the tools][2] surrounding it) or anything like that. It's written in sane JavaScript and consists of a tokenizer and tree builder.
+This parser is not that smart, but that's OK. You don't need to know about [parsing expression grammar][1] (and subsequently [the tools][2] surrounding it) or anything like that. It's written in sane JavaScript, is very fast, and consists of a tokenizer and an expression tree builder.
 
 ## Supported features
 
@@ -26,7 +26,7 @@ This module will export three methods...
 
 ### `tokenize(query)`
 
-Accepts a string and returns an array of tokens.
+Accepts a string and returns an array of tokens (see "grammar" below).
 
 ```js
 const tokens = parser.tokenize('"Elon Musk" AND (Space-X OR Tesla)');
@@ -50,7 +50,7 @@ const tokens = parser.tokenize('"Elon Musk" AND (Space-X OR Tesla)');
 
 ### `build(tokens)`
 
-Accepts an array of tokens and returns an object.
+Accepts an array of tokens and returns an expression tree object (see "grammar" below).
 
 ```js
 parser.build(tokens);
@@ -63,13 +63,15 @@ parser.build(tokens);
   "operator": "AND",
   "right": {
     "left": {
-      "type": "word",
-      "text": "Space-X"
-    },
-    "operator": "OR",
-    "right": {
-      "type": "word",
-      "text": "Tesla"
+      "left": {
+        "type": "word",
+        "text": "Space-X"
+      },
+      "operator": "OR",
+      "right": {
+        "type": "word",
+        "text": "Tesla"
+      }
     }
   }
 } */
@@ -81,19 +83,63 @@ Combines the `tokenize` and `build` methods. Accepts a string and returns an obj
 
 ## Grammar
 
-The tokenizer will return an array of _tokens_. Each token has a `type` property and the raw `text` that it was generated from. The types are:
+The `tokenize` method will return an array of _tokens_. Each token has a `type` property and the raw `text` that it was generated from. The types are:
 
 - **group** is an expression within parentheses.
 - **phrase** is a word or series of words within double quotes.
 - **operator** is one of `'AND'`, `'OR'` or `'NOT'`.
 - **word** is any series of characters up to, but not including a whitespace.
 
+The `build` method will return an _expression tree_ object. The tree is constructed with tokens and returns a nested structure showing the relationship between left and right operands.
+
+For example, the string `Good morning world` will generate the following tokens:
+
+```json
+[
+  {
+    "type": "word",
+    "text": "Good"
+  },
+  {
+    "type": "word",
+    "text": "morning"
+  },
+  {
+    "type": "word",
+    "text": "world!"
+  }
+]
+```
+
+These tokens can be used to construct this expression tree:
+
+```json
+{
+  "left": {
+    "type": "word",
+    "text": "Good"
+  },
+  "operator": "<implicit>",
+  "right": {
+    "left": {
+      "type": "word",
+      "text": "morning"
+    },
+    "operator": "<implicit>",
+    "right": {
+      "type": "word",
+      "text": "world!"
+    }
+  }
+}
+```
+
 ## Performance
 
-This module has been benchmarked using one weeks real search data:
+This module has been continuously benchmarked using one weeks real search data:
 
 ```
-Benchmark processed 54348 items in 0.503448318 seconds
+Benchmark processed 54348 items in 0.518364711 seconds
 ```
 
 ## Inspired by
