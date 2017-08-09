@@ -5,22 +5,30 @@
         "tokens": [
             {
                 "type": "word",
-                "text": "Investment"
+                "text": "Investment",
+                "offset": 0,
+                "length": 10
             },
             {
                 "type": "word",
-                "text": "banks"
+                "text": "banks",
+                "offset": 11,
+                "length": 5
             }
         ],
         "tree": {
             "left": {
                 "type": "word",
-                "text": "Investment"
+                "text": "Investment",
+                "offset": 0,
+                "length": 10
             },
             "operator": "<implicit>",
             "right": {
                 "type": "word",
-                "text": "banks"
+                "text": "banks",
+                "offset": 11,
+                "length": 5
             }
         }
     },
@@ -30,32 +38,44 @@
         "tokens": [
             {
                 "type": "word",
-                "text": "Oil"
+                "text": "Oil",
+                "offset": 0,
+                "length": 3
             },
             {
                 "type": "word",
-                "text": "&"
+                "text": "&",
+                "offset": 4,
+                "length": 1
             },
             {
                 "type": "word",
-                "text": "gas"
+                "text": "gas",
+                "offset": 6,
+                "length": 3
             }
         ],
         "tree": {
             "left": {
                 "type": "word",
-                "text": "Oil"
+                "text": "Oil",
+                "offset": 0,
+                "length": 3
             },
             "operator": "<implicit>",
             "right": {
                 "left": {
                     "type": "word",
-                    "text": "&"
+                    "text": "&",
+                    "offset": 4,
+                    "length": 1
                 },
                 "operator": "<implicit>",
                 "right": {
                     "type": "word",
-                    "text": "gas"
+                    "text": "gas",
+                    "offset": 6,
+                    "length": 3
                 }
             }
         }
@@ -66,12 +86,16 @@
         "tokens": [
             {
                 "type": "phrase",
-                "text": "\"hedge funds\""
+                "text": "\"hedge funds\"",
+                "offset": 0,
+                "length": 13
             }
         ],
         "tree": {
             "type": "phrase",
-            "text": "\"hedge funds\""
+            "text": "\"hedge funds\"",
+            "offset": 0,
+            "length": 13
         }
     },
     {
@@ -80,36 +104,50 @@
         "tokens": [
             {
                 "type": "word",
-                "text": "Scottish"
+                "text": "Scottish",
+                "offset": 0,
+                "length": 8
             },
             {
                 "type": "word",
-                "text": "Power"
+                "text": "Power",
+                "offset": 9,
+                "length": 5
             },
             {
                 "type": "operator",
-                "text": "OR"
+                "text": "OR",
+                "offset": 16,
+                "length": 2
             },
             {
                 "type": "word",
-                "text": "ScottishPower"
+                "text": "ScottishPower",
+                "offset": 20,
+                "length": 13
             }
         ],
         "tree": {
             "left": {
                 "type": "word",
-                "text": "Scottish"
+                "text": "Scottish",
+                "offset": 0,
+                "length": 8
             },
             "operator": "<implicit>",
             "right": {
                 "left": {
                     "type": "word",
-                    "text": "Power"
+                    "text": "Power",
+                    "offset": 9,
+                    "length": 5
                 },
                 "operator": "OR",
                 "right": {
                     "type": "word",
-                    "text": "ScottishPower"
+                    "text": "ScottishPower",
+                    "offset": 20,
+                    "length": 13
                 }
             }
         }
@@ -120,22 +158,30 @@
         "tokens": [
             {
                 "type": "word",
-                "text": "Tower"
+                "text": "Tower",
+                "offset": 0,
+                "length": 5
             },
             {
                 "type": "phrase",
-                "text": "\"new zealand\""
+                "text": "\"new zealand\"",
+                "offset": 6,
+                "length": 13
             }
         ],
         "tree": {
             "left": {
                 "type": "word",
-                "text": "Tower"
+                "text": "Tower",
+                "offset": 0,
+                "length": 5
             },
             "operator": "<implicit>",
             "right": {
                 "type": "phrase",
-                "text": "\"new zealand\""
+                "text": "\"new zealand\"",
+                "offset": 6,
+                "length": 13
             }
         }
     },
@@ -145,40 +191,56 @@
         "tokens": [
             {
                 "type": "phrase",
-                "text": "\"Ackman\""
+                "text": "\"Ackman\"",
+                "offset": 0,
+                "length": 8
             },
             {
                 "type": "operator",
-                "text": "AND"
+                "text": "AND",
+                "offset": 9,
+                "length": 3
             },
             {
                 "type": "phrase",
-                "text": "\"Herbalife\""
+                "text": "\"Herbalife\"",
+                "offset": 13,
+                "length": 11
             },
             {
                 "type": "operator",
-                "text": "AND"
+                "text": "AND",
+                "offset": 25,
+                "length": 3
             },
             {
                 "type": "phrase",
-                "text": "\"short\""
+                "text": "\"short\"",
+                "offset": 29,
+                "length": 7
             }
         ],
         "tree": {
             "left": {
                 "type": "phrase",
-                "text": "\"Ackman\""
+                "text": "\"Ackman\"",
+                "offset": 0,
+                "length": 8
             },
             "operator": "AND",
             "right": {
                 "left": {
                     "type": "phrase",
-                    "text": "\"Herbalife\""
+                    "text": "\"Herbalife\"",
+                    "offset": 13,
+                    "length": 11
                 },
                 "operator": "AND",
                 "right": {
                     "type": "phrase",
-                    "text": "\"short\""
+                    "text": "\"short\"",
+                    "offset": 29,
+                    "length": 7
                 }
             }
         }
@@ -189,27 +251,39 @@
         "tokens": [
             {
                 "type": "phrase",
-                "text": "\"Elon Musk\""
+                "text": "\"Elon Musk\"",
+                "offset": 0,
+                "length": 11
             },
             {
                 "type": "operator",
-                "text": "AND"
+                "text": "AND",
+                "offset": 12,
+                "length": 3
             },
             {
                 "type": "group",
                 "text": "(Space-X OR Tesla)",
+                "offset": 16,
+                "length": 18,
                 "children": [
                     {
                         "type": "word",
-                        "text": "Space-X"
+                        "text": "Space-X",
+                        "offset": 0,
+                        "length": 7
                     },
                     {
                         "type": "operator",
-                        "text": "OR"
+                        "text": "OR",
+                        "offset": 8,
+                        "length": 2
                     },
                     {
                         "type": "word",
-                        "text": "Tesla"
+                        "text": "Tesla",
+                        "offset": 11,
+                        "length": 5
                     }
                 ]
             }
@@ -217,19 +291,25 @@
         "tree": {
             "left": {
                 "type": "phrase",
-                "text": "\"Elon Musk\""
+                "text": "\"Elon Musk\"",
+                "offset": 0,
+                "length": 11
             },
             "operator": "AND",
             "right": {
                 "left": {
                     "left": {
                         "type": "word",
-                        "text": "Space-X"
+                        "text": "Space-X",
+                        "offset": 0,
+                        "length": 7
                     },
                     "operator": "OR",
                     "right": {
                         "type": "word",
-                        "text": "Tesla"
+                        "text": "Tesla",
+                        "offset": 11,
+                        "length": 5
                     }
                 }
             }
@@ -241,42 +321,58 @@
         "tokens": [
             {
                 "type": "word",
-                "text": "standard"
+                "text": "standard",
+                "offset": 0,
+                "length": 8
             },
             {
                 "type": "word",
-                "text": "&"
+                "text": "&",
+                "offset": 9,
+                "length": 1
             },
             {
                 "type": "word",
-                "text": "Poor's"
+                "text": "Poor's",
+                "offset": 11,
+                "length": 6
             },
             {
                 "type": "word",
-                "text": "1500"
+                "text": "1500",
+                "offset": 18,
+                "length": 4
             }
         ],
         "tree": {
             "left": {
                 "type": "word",
-                "text": "standard"
+                "text": "standard",
+                "offset": 0,
+                "length": 8
             },
             "operator": "<implicit>",
             "right": {
                 "left": {
                     "type": "word",
-                    "text": "&"
+                    "text": "&",
+                    "offset": 9,
+                    "length": 1
                 },
                 "operator": "<implicit>",
                 "right": {
                     "left": {
                         "type": "word",
-                        "text": "Poor's"
+                        "text": "Poor's",
+                        "offset": 11,
+                        "length": 6
                     },
                     "operator": "<implicit>",
                     "right": {
                         "type": "word",
-                        "text": "1500"
+                        "text": "1500",
+                        "offset": 18,
+                        "length": 4
                     }
                 }
             }
@@ -288,77 +384,109 @@
         "tokens": [
             {
                 "type": "word",
-                "text": "JavaScript"
+                "text": "JavaScript",
+                "offset": 0,
+                "length": 10
             },
             {
                 "type": "operator",
-                "text": "AND"
+                "text": "AND",
+                "offset": 11,
+                "length": 3
             },
             {
                 "type": "group",
                 "text": "(browser OR client-side)",
+                "offset": 15,
+                "length": 24,
                 "children": [
                     {
                         "type": "word",
-                        "text": "browser"
+                        "text": "browser",
+                        "offset": 0,
+                        "length": 7
                     },
                     {
                         "type": "operator",
-                        "text": "OR"
+                        "text": "OR",
+                        "offset": 8,
+                        "length": 2
                     },
                     {
                         "type": "word",
-                        "text": "client-side"
+                        "text": "client-side",
+                        "offset": 11,
+                        "length": 11
                     }
                 ]
             },
             {
                 "type": "operator",
-                "text": "AND"
+                "text": "AND",
+                "offset": 40,
+                "length": 3
             },
             {
                 "type": "group",
                 "text": "(Webpack OR Browserify)",
+                "offset": 44,
+                "length": 23,
                 "children": [
                     {
                         "type": "word",
-                        "text": "Webpack"
+                        "text": "Webpack",
+                        "offset": 0,
+                        "length": 7
                     },
                     {
                         "type": "operator",
-                        "text": "OR"
+                        "text": "OR",
+                        "offset": 8,
+                        "length": 2
                     },
                     {
                         "type": "word",
-                        "text": "Browserify"
+                        "text": "Browserify",
+                        "offset": 11,
+                        "length": 10
                     }
                 ]
             },
             {
                 "type": "operator",
-                "text": "NOT"
+                "text": "NOT",
+                "offset": 68,
+                "length": 3
             },
             {
                 "type": "word",
-                "text": "React"
+                "text": "React",
+                "offset": 72,
+                "length": 5
             }
         ],
         "tree": {
             "left": {
                 "type": "word",
-                "text": "JavaScript"
+                "text": "JavaScript",
+                "offset": 0,
+                "length": 10
             },
             "operator": "AND",
             "right": {
                 "left": {
                     "left": {
                         "type": "word",
-                        "text": "browser"
+                        "text": "browser",
+                        "offset": 0,
+                        "length": 7
                     },
                     "operator": "OR",
                     "right": {
                         "type": "word",
-                        "text": "client-side"
+                        "text": "client-side",
+                        "offset": 11,
+                        "length": 11
                     }
                 },
                 "operator": "AND",
@@ -366,18 +494,24 @@
                     "left": {
                         "left": {
                             "type": "word",
-                            "text": "Webpack"
+                            "text": "Webpack",
+                            "offset": 0,
+                            "length": 7
                         },
                         "operator": "OR",
                         "right": {
                             "type": "word",
-                            "text": "Browserify"
+                            "text": "Browserify",
+                            "offset": 11,
+                            "length": 10
                         }
                     },
                     "operator": "NOT",
                     "right": {
                         "type": "word",
-                        "text": "React"
+                        "text": "React",
+                        "offset": 72,
+                        "length": 5
                     }
                 }
             }

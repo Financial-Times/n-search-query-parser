@@ -5,26 +5,36 @@
         "tokens": [
             {
                 "type": "phrase",
-                "text": "\"Theresa May\""
+                "text": "\"Theresa May\"",
+                "offset": 0,
+                "length": 13
             },
             {
                 "type": "operator",
-                "text": "NOT"
+                "text": "NOT",
+                "offset": 18,
+                "length": 3
             },
             {
                 "type": "word",
-                "text": "brexit"
+                "text": "brexit",
+                "offset": 22,
+                "length": 6
             }
         ],
         "tree": {
             "left": {
                 "type": "phrase",
-                "text": "\"Theresa May\""
+                "text": "\"Theresa May\"",
+                "offset": 0,
+                "length": 13
             },
             "operator": "NOT",
             "right": {
                 "type": "word",
-                "text": "brexit"
+                "text": "brexit",
+                "offset": 22,
+                "length": 6
             }
         }
     }
