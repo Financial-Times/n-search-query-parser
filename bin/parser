@@ -4,6 +4,4 @@ const arg = process.argv.slice(-1).pop();
 
 const { parse } = require('../');
 
-console.log(
-	JSON.stringify(parse(arg), null, 2)
-);
+console.log(JSON.stringify(parse(arg), null, 2)); // eslint-disable-line no-console
