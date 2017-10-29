@@ -6,7 +6,7 @@ This parser is not that smart, but that's OK. You don't need to know about [pars
 
 - Conjunction operators (`AND`, `OR` and `NOT`)
 - Quoted phrases (`"Theresa May"`)
-- Grouping with parentheses (`("Theresa May" OR "Boris Johnson)`)
+- Grouping with parentheses (`("Theresa May" OR "Boris Johnson")`)
 
 ## Installation
 
@@ -26,7 +26,7 @@ This module will export three methods...
 
 ### `tokenize(query)`
 
-Accepts a string and returns an array of tokens (see "grammar" below).
+Accepts a string and returns an array of tokens (see "grammar" below for more details).
 
 ```js
 const tokens = parser.tokenize('"Elon Musk" AND (Space-X OR Tesla)');
@@ -50,7 +50,7 @@ const tokens = parser.tokenize('"Elon Musk" AND (Space-X OR Tesla)');
 
 ### `build(tokens)`
 
-Accepts an array of tokens and returns an expression tree object (see "grammar" below).
+Accepts an array of tokens and returns an expression tree object (see "grammar" below for more details).
 
 ```js
 parser.build(tokens);
@@ -79,7 +79,7 @@ parser.build(tokens);
 
 ### `parse(string)`
 
-Combines the `tokenize` and `build` methods. Accepts a string and returns an object.
+Combines the `tokenize` and `build` methods. Accepts a string and returns an expression tree object.
 
 ## Grammar
 
@@ -92,7 +92,7 @@ The `tokenize` method will return an array of _tokens_. Each token has a `type` 
 
 The `build` method will return an _expression tree_ object. The tree is constructed with tokens and returns a nested structure showing the relationship between left and right operands.
 
-For example, the string `Good morning world` will generate the following tokens:
+For example, the string `Good morning World!` will generate the following tokens:
 
 ```json
 [
@@ -106,12 +106,12 @@ For example, the string `Good morning world` will generate the following tokens:
   },
   {
     "type": "word",
-    "text": "world!"
+    "text": "World!"
   }
 ]
 ```
 
-These tokens can be used to construct this expression tree:
+These tokens can be used to construct the following expression tree:
 
 ```json
 {
@@ -128,7 +128,7 @@ These tokens can be used to construct this expression tree:
     "operator": "<implicit>",
     "right": {
       "type": "word",
-      "text": "world!"
+      "text": "World!"
     }
   }
 }
@@ -136,7 +136,7 @@ These tokens can be used to construct this expression tree:
 
 ## Performance
 
-This module has been continuously benchmarked using one weeks real search data:
+This module has been continuously benchmarked using real search data:
 
 ```
 Benchmark processed 54348 items in 0.518364711 seconds
@@ -145,7 +145,7 @@ Benchmark processed 54348 items in 0.518364711 seconds
 ## Inspired by
 
 - [Lucene query parser][3] (NPM module, generated from PEG)
-- [Building a search query parser][4] (Article by Tom Ashworth, about search on Twitter)
+- [Building a search query parser][4] (Article by Tom Ashworth, about implementing search on Twitter)
 
 [1]: https://en.wikipedia.org/wiki/Parsing_expression_grammar
 [2]: http://canopy.jcoglan.com/
