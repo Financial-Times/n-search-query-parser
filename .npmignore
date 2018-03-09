@@ -1,2 +1,6 @@
 test/
 scripts/
+ft.yml
+circle.yml
+Makefile
+secret-squirrel.js
