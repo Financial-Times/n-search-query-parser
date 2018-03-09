@@ -24,7 +24,7 @@ const parser = require('@financial-times/n-search-parser');
 
 This module will export three methods...
 
-### `tokenize(query)`
+### `.tokenize(query)`
 
 Accepts a string and returns an array of tokens (see "grammar" below for more details).
 
@@ -35,20 +35,26 @@ const tokens = parser.tokenize('"Elon Musk" AND (Space-X OR Tesla)');
   {
     type: 'phrase',
     text: '"Elon Musk"'
+    offset: 0,
+    length: 11
   },
   {
     type: 'operator',
-    text: 'AND'
+    text: 'AND',
+    offset: 12,
+    length: 3
   },
   {
     type: 'group',
     text: '(Space-X OR Tesla)',
+    offset: 16,
+    length: 18,
     children: [ ... ]
   }
 ] */
 ```
 
-### `build(tokens)`
+### `.build(tokens)`
 
 Accepts an array of tokens and returns an expression tree object (see "grammar" below for more details).
 
@@ -56,28 +62,28 @@ Accepts an array of tokens and returns an expression tree object (see "grammar" 
 parser.build(tokens);
 
 /* => {
-  "left": {
-    "type": "phrase",
-    "text": "\"Elon Musk\""
+  left: {
+    type: 'phrase',
+    text: '"Elon Musk"'
   },
-  "operator": "AND",
-  "right": {
-    "left": {
-      "left": {
-        "type": "word",
-        "text": "Space-X"
+  operator: 'AND',
+  right: {
+    left: {
+      left: {
+        type: 'word',
+        text: 'Space-X'
       },
-      "operator": "OR",
-      "right": {
-        "type": "word",
-        "text": "Tesla"
+      operator: 'OR',
+      right: {
+        type: 'word',
+        text: 'Tesla'
       }
     }
   }
 } */
 ```
 
-### `parse(string)`
+### `.parse(string)`
 
 Combines the `tokenize` and `build` methods. Accepts a string and returns an expression tree object.
 
