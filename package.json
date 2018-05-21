@@ -1,5 +1,6 @@
 {
   "name": "@financial-times/n-search-parser",
+  "description": "A sane, fast, not too smart, search expression parser",
   "version": "0.0.0",
   "main": "lib/parser.js",
   "repository": {
@@ -8,14 +9,12 @@
   },
   "homepage": "https://github.com/Financial-Times/n-search-parser",
   "devDependencies": {
-    "@financial-times/n-gage": "^1.19.0",
+    "@financial-times/n-gage": "^2.0.2",
     "chai": "^4.1.0",
-    "eslint": "^4.18.0",
-    "lintspaces-cli": "^0.6.0",
-    "mocha": "^5.0.0"
+    "mocha": "^5.2.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",
