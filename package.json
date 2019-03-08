@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/Financial-Times/n-search-parser",
   "devDependencies": {
-    "@financial-times/n-gage": "^2.0.2",
+    "@financial-times/n-gage": "3.4.0",
     "chai": "^4.1.0",
     "mocha": "^5.2.0"
   },
