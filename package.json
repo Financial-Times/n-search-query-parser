@@ -11,7 +11,8 @@
   "devDependencies": {
     "@financial-times/n-gage": "^3.6.0",
     "chai": "^4.1.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "snyk": "^1.168.0"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -19,7 +20,8 @@
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
-    "prepush": "make verify -j3"
+    "prepush": "make verify -j3",
+    "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "bin": {
     "n-search-parser": "bin/parser"
